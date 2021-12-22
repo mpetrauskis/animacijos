@@ -1,0 +1,115 @@
+body {
+    background: #22577A;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 450px;
+    padding: 10px;
+    margin: auto;
+}
+
+.container .ball {
+    width: 100px;
+    height: 100px;
+    background: #38A3A5;
+    padding: 10px;
+    border: 3px;
+    transition: transform 0.3s;
+}
+
+.transition:hover .ball {
+    transform: translateX(300px);
+}
+
+.animation .ball {
+    animation-name: bouncing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-delay: 0;
+}
+
+@keyframes bouncing {
+    from {transform: translateX(0)}
+    0% {
+        background: #38A3A5;
+        transform:translateX(0) rotate(0deg);
+        border-radius: 30;
+        border-style: double;
+    }
+    
+    25% {
+        background: #57CC99;
+        transform:translateX(75) rotate(90deg);
+        border-radius: 60px;
+        border-style: inset;
+    }
+
+    50% {
+        background: #80ED99;
+        transform:translateX(150) rotate(180deg);
+        border-radius: 90;
+        border-style: outset;
+    }
+
+    75% {
+        background: #57CC99;
+        transform:translateX(225) rotate(90deg);
+         border-radius: 60px;
+    }
+
+    100% {
+        background: #38A3A5;
+        transform:translateX(300) rotate(360deg);
+        border-radius: -30;
+        border-style: dotted;
+    }
+    to {
+        transform: translateX(300px)
+    }
+}
+
+
+.spinny {
+    width: 100px;
+    height: 100px;
+    background-color: #38A3A5;
+
+    margin: 200px auto;
+    animation: loader 2s infinite;
+}
+
+@keyframes loader {
+    0% {
+        background: #38A3A5;
+        transform: rotate(0deg);
+        border-radius: 0;
+    }
+    
+    25% {
+        background: #57CC99;
+        transform: rotate(90deg);
+        border-radius: 45px;
+    }
+
+    50% {
+        background: #80ED99;
+        transform: rotate(180deg);
+        border-radius: 90;
+    }
+
+    75% {
+        background: #57CC99;
+        transform: rotate(270deg);
+         border-radius: 135px;
+    }
+
+    100% {
+        background: #38A3A5;
+        transform: rotate(360deg);
+        border-radius: -90;
+    }
+}
